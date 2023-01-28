@@ -1,0 +1,547 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 245px;
+}
+
+.u-section-1 .u-text-1 {
+  margin: 31px 0 60px;
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 225px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 92px;
+  }
+} .u-section-2 {
+  min-height: 666px;
+}
+
+.u-section-2 .u-shape-1 {
+  background-image: none;
+  height: 412px;
+  margin-top: 250px;
+  margin-bottom: 0;
+}
+
+.u-section-2 .u-layout-wrap-1 {
+  width: 1140px;
+  margin: -597px auto 0;
+}
+
+.u-section-2 .u-layout-cell-1 {
+  min-height: 597px;
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 60px 30px;
+}
+
+.u-section-2 .u-image-1 {
+  width: 240px;
+  height: 240px;
+  background-image: url("images/Mesadetrabajo2.png");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 0 auto 0 0;
+}
+
+.u-section-2 .u-text-1 {
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 18px 0 0 80px;
+}
+
+.u-section-2 .u-text-2 {
+  font-weight: normal;
+  margin: 30px 0 0 124px;
+}
+
+.u-section-2 .u-layout-cell-2 {
+  min-height: 597px;
+}
+
+.u-section-2 .u-container-layout-2 {
+  padding: 60px 30px 59px;
+}
+
+.u-section-2 .u-text-3 {
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 52px 102px 0 0;
+}
+
+.u-section-2 .u-text-4 {
+  font-weight: normal;
+  margin: 30px 0 0;
+}
+
+.u-section-2 .u-image-2 {
+  width: 240px;
+  height: 240px;
+  background-image: url("images/Mesadetrabajo3.png");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 20px 22px 0 auto;
+}
+
+@media (max-width: 1199px) {
+   .u-section-2 {
+    min-height: 900px;
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    width: 940px;
+  }
+
+  .u-section-2 .u-layout-cell-1 {
+    min-height: 492px;
+  }
+
+  .u-section-2 .u-text-1 {
+    margin-left: 0;
+  }
+
+  .u-section-2 .u-text-2 {
+    margin-left: 24px;
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 492px;
+  }
+
+  .u-section-2 .u-text-3 {
+    margin-right: 52px;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-2 {
+    min-height: 304px;
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    width: 720px;
+  }
+
+  .u-section-2 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-2 .u-text-2 {
+    margin-left: 0;
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-2 .u-text-3 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-2 {
+    min-height: 1476px;
+  }
+
+  .u-section-2 .u-shape-1 {
+    height: 984px;
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    width: 540px;
+    margin-top: -1150px;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-2 {
+    min-height: 1216px;
+  }
+
+  .u-section-2 .u-shape-1 {
+    height: 870px;
+    margin-top: 346px;
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    width: 340px;
+    margin-top: -1133px;
+    margin-bottom: 52px;
+  }
+} .u-section-3 {
+  min-height: 666px;
+}
+
+.u-section-3 .u-shape-1 {
+  background-image: none;
+  height: 417px;
+  margin-top: 240px;
+  margin-bottom: 0;
+}
+
+.u-section-3 .u-layout-wrap-1 {
+  width: 1140px;
+  margin: -584px auto -136px;
+}
+
+.u-section-3 .u-layout-cell-1 {
+  min-height: 553px;
+}
+
+.u-section-3 .u-container-layout-1 {
+  padding: 60px 30px;
+}
+
+.u-section-3 .u-image-1 {
+  width: 240px;
+  height: 240px;
+  background-image: url("images/Mesadetrabajo4.png");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 0 auto 0 0;
+}
+
+.u-section-3 .u-text-1 {
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 18px 0 0 80px;
+}
+
+.u-section-3 .u-text-2 {
+  font-weight: normal;
+  margin: 30px 0 0 80px;
+}
+
+.u-section-3 .u-layout-cell-2 {
+  min-height: 553px;
+}
+
+.u-section-3 .u-container-layout-2 {
+  padding: 60px 30px 40px;
+}
+
+.u-section-3 .u-text-3 {
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 52px 102px 0 0;
+}
+
+.u-section-3 .u-text-4 {
+  font-weight: normal;
+  margin: 30px 102px 0 0;
+}
+
+.u-section-3 .u-image-2 {
+  width: 240px;
+  height: 240px;
+  background-image: url("images/Mesadetrabajo5.png");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 20px 22px 0 auto;
+}
+
+@media (max-width: 1199px) {
+   .u-section-3 {
+    min-height: 900px;
+  }
+
+  .u-section-3 .u-layout-wrap-1 {
+    width: 940px;
+  }
+
+  .u-section-3 .u-layout-cell-1 {
+    min-height: 456px;
+  }
+
+  .u-section-3 .u-text-1 {
+    margin-left: 0;
+  }
+
+  .u-section-3 .u-text-2 {
+    margin-left: 0;
+  }
+
+  .u-section-3 .u-layout-cell-2 {
+    min-height: 456px;
+  }
+
+  .u-section-3 .u-text-3 {
+    margin-right: 52px;
+  }
+
+  .u-section-3 .u-text-4 {
+    margin-right: 2px;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-3 {
+    min-height: 656px;
+  }
+
+  .u-section-3 .u-layout-wrap-1 {
+    width: 720px;
+  }
+
+  .u-section-3 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-3 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-3 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-3 .u-container-layout-2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-3 .u-text-3 {
+    margin-right: 0;
+  }
+
+  .u-section-3 .u-text-4 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-3 {
+    min-height: 1587px;
+  }
+
+  .u-section-3 .u-shape-1 {
+    height: 984px;
+  }
+
+  .u-section-3 .u-layout-wrap-1 {
+    width: 540px;
+  }
+
+  .u-section-3 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-3 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-3 {
+    min-height: 1240px;
+  }
+
+  .u-section-3 .u-shape-1 {
+    height: 677px;
+    margin-top: 140px;
+  }
+
+  .u-section-3 .u-layout-wrap-1 {
+    width: 340px;
+    margin-bottom: 0;
+  }
+} .u-section-4 {
+  min-height: 666px;
+}
+
+.u-section-4 .u-shape-1 {
+  background-image: none;
+  height: 431px;
+  margin-top: 235px;
+  margin-bottom: 0;
+}
+
+.u-section-4 .u-layout-wrap-1 {
+  width: 1140px;
+  margin: -598px auto -107px;
+}
+
+.u-section-4 .u-layout-cell-1 {
+  min-height: 598px;
+}
+
+.u-section-4 .u-container-layout-1 {
+  padding: 60px 30px;
+}
+
+.u-section-4 .u-image-1 {
+  width: 240px;
+  height: 240px;
+  background-image: url("images/Mesadetrabajo6.png");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 0 auto 0 0;
+}
+
+.u-section-4 .u-text-1 {
+  font-weight: normal;
+  margin: 18px 0 0;
+}
+
+.u-section-4 .u-layout-cell-2 {
+  min-height: 598px;
+}
+
+.u-section-4 .u-container-layout-2 {
+  padding: 60px 30px 34px;
+}
+
+.u-section-4 .u-text-2 {
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 52px 102px 0 0;
+}
+
+.u-section-4 .u-text-3 {
+  font-weight: normal;
+  margin: 30px 102px 0 0;
+}
+
+.u-section-4 .u-image-2 {
+  width: 240px;
+  height: 240px;
+  background-image: url("images/Mesadetrabajo1.png");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 20px 22px 0 auto;
+}
+
+@media (max-width: 1199px) {
+   .u-section-4 {
+    min-height: 900px;
+  }
+
+  .u-section-4 .u-layout-wrap-1 {
+    width: 940px;
+  }
+
+  .u-section-4 .u-layout-cell-1 {
+    min-height: 493px;
+  }
+
+  .u-section-4 .u-layout-cell-2 {
+    min-height: 493px;
+  }
+
+  .u-section-4 .u-text-2 {
+    margin-right: 52px;
+  }
+
+  .u-section-4 .u-text-3 {
+    margin-right: 2px;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-4 {
+    min-height: 681px;
+  }
+
+  .u-section-4 .u-layout-wrap-1 {
+    width: 720px;
+  }
+
+  .u-section-4 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-4 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-4 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-4 .u-container-layout-2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-4 .u-text-2 {
+    margin-right: 0;
+  }
+
+  .u-section-4 .u-text-3 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-4 {
+    min-height: 1552px;
+  }
+
+  .u-section-4 .u-shape-1 {
+    height: 984px;
+  }
+
+  .u-section-4 .u-layout-wrap-1 {
+    width: 540px;
+  }
+
+  .u-section-4 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-4 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-4 {
+    min-height: 1283px;
+  }
+
+  .u-section-4 .u-shape-1 {
+    height: 684px;
+    margin-top: 174px;
+  }
+
+  .u-section-4 .u-layout-wrap-1 {
+    width: 340px;
+    margin-bottom: 0;
+  }
+}
