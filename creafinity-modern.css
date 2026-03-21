@@ -1,0 +1,603 @@
+/* =====================================================
+   Creafinity Modern — devcloud branch
+   Modernización: animaciones, interactividad, secciones
+   ===================================================== */
+
+:root {
+  --cf-primary: #478ac9;
+  --cf-primary-dark: #2d6fa8;
+  --cf-secondary: #6c4fcf;
+  --cf-gradient: linear-gradient(135deg, #478ac9 0%, #6c4fcf 100%);
+  --cf-dark: #0f172a;
+  --cf-text: #334155;
+  --cf-text-light: #64748b;
+  --cf-white: #ffffff;
+  --cf-bg-soft: #f0f4ff;
+  --cf-radius: 16px;
+  --cf-shadow: 0 10px 40px rgba(71, 138, 201, 0.14);
+  --cf-shadow-hover: 0 24px 60px rgba(71, 138, 201, 0.28);
+  --cf-transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   STICKY HEADER — glassmorphism
+   ============================================ */
+.u-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 2px 24px rgba(71, 138, 201, 0.1) !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
+.u-body {
+  padding-top: 80px;
+}
+
+/* ============================================
+   HERO — fondo animado con gradiente
+   ============================================ */
+#sec-5c95 {
+  background-image: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #2563a8 75%, #478ac9 100%) !important;
+  background-size: 300% 300% !important;
+  animation: cf-hero-gradient 10s ease infinite !important;
+}
+
+@keyframes cf-hero-gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Texto del hero en blanco */
+#sec-5c95 .u-text-1,
+#sec-5c95 .u-text-2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Línea typewriter */
+.cf-hero-sub {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: 1.25rem;
+  margin: 16px auto 0;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.cf-typewriter-wrap {
+  display: inline;
+  border-right: 2px solid var(--cf-primary);
+  padding-right: 3px;
+  animation: cf-blink 0.8s step-end infinite;
+}
+
+@keyframes cf-blink {
+  from, to { border-color: rgba(255, 255, 255, 0.7); }
+  50%       { border-color: transparent; }
+}
+
+/* Botón hero mejorado */
+#sec-5c95 .u-btn-1 {
+  background: var(--cf-gradient) !important;
+  box-shadow: 0 8px 30px rgba(71, 138, 201, 0.45) !important;
+  transition: var(--cf-transition) !important;
+}
+
+#sec-5c95 .u-btn-1:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 14px 40px rgba(71, 138, 201, 0.6) !important;
+}
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+.cf-reveal {
+  opacity: 0;
+  transform: translateY(44px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.cf-reveal-left {
+  opacity: 0;
+  transform: translateX(-44px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.cf-reveal-right {
+  opacity: 0;
+  transform: translateX(44px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.cf-reveal.cf-visible,
+.cf-reveal-left.cf-visible,
+.cf-reveal-right.cf-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger delays para grids */
+.cf-stagger > *:nth-child(1) { transition-delay: 0.05s; }
+.cf-stagger > *:nth-child(2) { transition-delay: 0.15s; }
+.cf-stagger > *:nth-child(3) { transition-delay: 0.25s; }
+.cf-stagger > *:nth-child(4) { transition-delay: 0.35s; }
+.cf-stagger > *:nth-child(5) { transition-delay: 0.45s; }
+.cf-stagger > *:nth-child(6) { transition-delay: 0.55s; }
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+.cf-stats-section {
+  background: var(--cf-gradient);
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cf-stats-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  top: -250px;
+  right: -150px;
+  pointer-events: none;
+}
+
+.cf-stats-section::after {
+  content: '';
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  bottom: -175px;
+  left: -80px;
+  pointer-events: none;
+}
+
+.cf-stats-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cf-stat-item {
+  color: #ffffff;
+  text-align: center;
+}
+
+.cf-stat-number {
+  font-size: 3.8rem;
+  font-weight: 800;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cf-stat-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  opacity: 0.82;
+}
+
+.cf-stat-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+.cf-testimonials {
+  background: var(--cf-bg-soft);
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.cf-section-label {
+  display: inline-block;
+  background: rgba(71, 138, 201, 0.1);
+  color: var(--cf-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.cf-testimonials h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--cf-dark);
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  margin: 0 0 12px;
+}
+
+.cf-section-subtitle {
+  color: var(--cf-text-light);
+  font-size: 1.05rem;
+  margin-bottom: 56px;
+}
+
+.cf-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cf-testimonial-card {
+  background: var(--cf-white);
+  border-radius: var(--cf-radius);
+  padding: 36px 28px 30px;
+  box-shadow: var(--cf-shadow);
+  text-align: left;
+  transition: var(--cf-transition);
+  position: relative;
+  border: 1px solid rgba(71, 138, 201, 0.08);
+}
+
+.cf-testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--cf-shadow-hover);
+}
+
+.cf-testimonial-card::before {
+  content: '\201C';
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--cf-primary);
+  opacity: 0.12;
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 8px;
+  left: 22px;
+}
+
+.cf-stars {
+  color: #f59e0b;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.cf-testimonial-text {
+  color: var(--cf-text);
+  line-height: 1.75;
+  font-size: 0.94rem;
+  margin-bottom: 28px;
+}
+
+.cf-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cf-testimonial-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--cf-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.cf-testimonial-name {
+  font-weight: 700;
+  color: var(--cf-dark);
+  font-size: 0.93rem;
+}
+
+.cf-testimonial-role {
+  color: var(--cf-text-light);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cf-cta-section {
+  background: var(--cf-dark);
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cf-cta-section::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 138, 201, 0.18) 0%, transparent 70%);
+  top: -300px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.cf-cta-section::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(108, 79, 207, 0.15) 0%, transparent 70%);
+  bottom: -200px;
+  left: -50px;
+  pointer-events: none;
+}
+
+.cf-cta-section h2 {
+  color: #ffffff;
+  font-size: 2.6rem;
+  font-weight: 800;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  margin: 0 0 16px;
+  position: relative;
+  z-index: 1;
+  line-height: 1.2;
+}
+
+.cf-cta-section h2 span {
+  background: var(--cf-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cf-cta-section p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.1rem;
+  max-width: 540px;
+  margin: 0 auto 44px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.cf-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.cf-cta-btn-primary {
+  background: var(--cf-gradient);
+  color: #ffffff;
+  padding: 16px 44px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--cf-transition);
+  box-shadow: 0 8px 30px rgba(71, 138, 201, 0.4);
+}
+
+.cf-cta-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(71, 138, 201, 0.6);
+}
+
+.cf-cta-btn-secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 16px 44px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--cf-transition);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.cf-cta-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   CARD HOVER EFFECTS — Servicios y Planes
+   ============================================ */
+.u-repeater-item {
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+.u-repeater-item:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 24px 50px rgba(71, 138, 201, 0.18) !important;
+}
+
+.u-icon-circle {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.u-list-item:hover .u-icon-circle {
+  transform: scale(1.15) rotate(6deg) !important;
+  box-shadow: 0 8px 28px rgba(71, 138, 201, 0.28) !important;
+}
+
+/* ============================================
+   BADGE "MÁS POPULAR" EN PLANES
+   ============================================ */
+.cf-plan-featured-wrap {
+  position: relative;
+}
+
+.cf-plan-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cf-gradient);
+  color: #ffffff;
+  padding: 5px 22px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(71, 138, 201, 0.4);
+}
+
+/* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+.cf-wa-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 62px;
+  height: 62px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  z-index: 9999;
+  text-decoration: none;
+  transition: var(--cf-transition);
+  animation: cf-wa-pulse 2.5s ease-in-out infinite;
+}
+
+.cf-wa-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 36px rgba(37, 211, 102, 0.65);
+  animation: none;
+}
+
+.cf-wa-float svg {
+  width: 34px;
+  height: 34px;
+  fill: #ffffff;
+}
+
+@keyframes cf-wa-pulse {
+  0%, 100% {
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  }
+  50% {
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 0 0 12px rgba(37, 211, 102, 0.12);
+  }
+}
+
+/* Tooltip WhatsApp */
+.cf-wa-float::before {
+  content: 'Hablemos por WhatsApp';
+  position: absolute;
+  right: calc(100% + 14px);
+  background: rgba(15, 23, 42, 0.88);
+  color: #ffffff;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cf-wa-float:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 991px) {
+  .cf-testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cf-stats-grid {
+    gap: 36px;
+  }
+
+  .cf-stat-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .cf-testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .cf-stats-grid {
+    gap: 28px;
+  }
+
+  .cf-stat-number {
+    font-size: 2.8rem;
+  }
+
+  .cf-cta-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .cf-section-subtitle {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cf-wa-float {
+    bottom: 22px;
+    right: 22px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .cf-wa-float::before {
+    display: none;
+  }
+
+  .cf-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
