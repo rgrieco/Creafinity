@@ -1473,6 +1473,25 @@ h1, h2, h3, h4, h5 {
 
 .cf-form__textarea { resize: vertical; min-height: 130px; }
 
+.cf-form__feedback {
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.cf-form__feedback--ok {
+  background: #e6f7f4;
+  color: #1a7a6e;
+  border: 1px solid #b2e5dd;
+}
+.cf-form__feedback--error {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #f5c6c6;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */

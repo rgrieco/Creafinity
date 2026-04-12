@@ -140,33 +140,47 @@
     var form = document.getElementById('cf-contact-form');
     if (!form) return;
 
+    var feedback = document.getElementById('cf-form-feedback');
+
+    function showFeedback(ok, msg) {
+      if (!feedback) return;
+      feedback.textContent = msg;
+      feedback.className = 'cf-form__feedback ' + (ok ? 'cf-form__feedback--ok' : 'cf-form__feedback--error');
+      feedback.style.display = 'block';
+    }
+
+    function resetBtn(btn, orig) {
+      btn.disabled = false;
+      btn.textContent = orig;
+      btn.style.background = '';
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = form.querySelector('[type="submit"]');
       var orig = btn.textContent;
       btn.disabled = true;
       btn.textContent = 'Enviando...';
+      if (feedback) feedback.style.display = 'none';
 
       fetch(form.action, {
         method: 'POST',
         body: new FormData(form)
-      }).then(function () {
-        btn.textContent = '¡Enviado!';
-        btn.style.background = '#1a8e8e';
-        form.reset();
-        setTimeout(function () {
-          btn.disabled = false;
-          btn.textContent = orig;
-          btn.style.background = '';
-        }, 4000);
-      }).catch(function () {
-        btn.textContent = 'Error — intentá de nuevo';
-        btn.style.background = '#e53e3e';
-        setTimeout(function () {
-          btn.disabled = false;
-          btn.textContent = orig;
-          btn.style.background = '';
-        }, 3000);
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data && data.success) {
+          showFeedback(true, '¡Mensaje enviado! Te contactamos en menos de 24 horas.');
+          form.reset();
+          setTimeout(function () { resetBtn(btn, orig); }, 4000);
+        } else {
+          showFeedback(false, 'No se pudo enviar el mensaje. Intentá de nuevo o escribinos por WhatsApp.');
+          resetBtn(btn, orig);
+        }
+      })
+      .catch(function () {
+        showFeedback(false, 'Error de conexión. Intentá de nuevo o escribinos por WhatsApp.');
+        resetBtn(btn, orig);
       });
     });
   }
