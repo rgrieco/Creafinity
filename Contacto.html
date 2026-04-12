@@ -113,7 +113,7 @@
           <div class="cf-form__row">
             <div class="cf-form__group">
               <label class="cf-form__label" for="cf-nombre">Nombre *</label>
-              <input type="text" id="cf-nombre" name="nombre" class="cf-form__input" placeholder="Tu nombre" required>
+              <input type="text" id="cf-nombre" name="name" class="cf-form__input" placeholder="Tu nombre" required>
             </div>
             <div class="cf-form__group">
               <label class="cf-form__label" for="cf-email">Email *</label>
@@ -142,9 +142,10 @@
 
           <div class="cf-form__group">
             <label class="cf-form__label" for="cf-mensaje">Contanos sobre tu proyecto *</label>
-            <textarea id="cf-mensaje" name="mensaje" class="cf-form__textarea" placeholder="¿Qué necesitás? Cuantos más detalles nos des, mejor podremos asesorarte." required></textarea>
+            <textarea id="cf-mensaje" name="message" class="cf-form__textarea" placeholder="¿Qué necesitás? Cuantos más detalles nos des, mejor podremos asesorarte." required></textarea>
           </div>
 
+          <div id="cf-form-feedback" class="cf-form__feedback" style="display:none;"></div>
           <button type="submit" class="cf-btn cf-btn--primary cf-btn--lg" style="width:100%;justify-content:center;">
             Enviar Mensaje →
           </button>
