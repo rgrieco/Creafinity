@@ -163,18 +163,23 @@
       btn.textContent = 'Enviando...';
       if (feedback) feedback.style.display = 'none';
 
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       })
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        if (data && data.success) {
+        if (data && data.success === true) {
           showFeedback(true, '¡Mensaje enviado! Te contactamos en menos de 24 horas.');
           form.reset();
           setTimeout(function () { resetBtn(btn, orig); }, 4000);
         } else {
-          showFeedback(false, 'No se pudo enviar el mensaje. Intentá de nuevo o escribinos por WhatsApp.');
+          var msg = (data && data.message) ? data.message : 'No se pudo enviar el mensaje.';
+          showFeedback(false, msg + ' Intentá de nuevo o escribinos por WhatsApp.');
           resetBtn(btn, orig);
         }
       })
